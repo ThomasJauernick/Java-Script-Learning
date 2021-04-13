@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Roll The Dice!</title>
+	</head>
+<body>
+    <p><button onclick="DiceRoll()">Roll the Dice!</button></p>
+    <p><img id="Dice" src=""></p>
+    
+    <script type="text/javascript">
+        function DiceRoll(){
+            var min = 1;
+            var max = 6;
+            var RandomNumber = Math.round((Math.random() * (max - min) + min));
+            //console.log("Hint! it's "+RandomNumber);
+            if (RandomNumber == 1){
+                document.getElementById('Dice').src='1.png';
+            }
+            if (RandomNumber == 2){
+                document.getElementById('Dice').src='2.png';
+            }
+            if (RandomNumber == 3){
+                document.getElementById('Dice').src='3.png';
+            }
+            if (RandomNumber == 4){
+                document.getElementById('Dice').src='4.png';
+            }
+            if (RandomNumber == 5){
+                document.getElementById('Dice').src='5.png';
+            }
+            if (RandomNumber == 6){
+                document.getElementById('Dice').src='6.png';
+            }
+    }
+    </script>
+</body>
+</html>

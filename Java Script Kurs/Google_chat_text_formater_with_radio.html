@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text formatter</title>
+	</head>
+<body>
+    <h4>Google Chat Text formatter</h4>
+    <p>Input<br><textarea id="blanktext" rows="6" cols="60"></textarea></p>
+
+    <input type="checkbox" id="optionItalic" /> Italic<br>
+    <input type="checkbox" id="optionBold" /> Bold<br>
+    <input type="checkbox" id="optionStrikeThrough" /> Strike Through<br>
+    <!-- <input type="checkbox" id="optionInlineCodeBlock" /> Inline Code Block<br>
+    <input type="checkbox" id="optionMultilineCodeBlock" /> MultilineCodeBlock<br> -->
+
+    <div>
+        <input type="radio" id="optionNoCodeBlock" name="CodeBlock"
+               checked>
+        <label for="optionNoCodeBlock">NoCodeBlock</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="optionInlineCodeBlock" name="CodeBlock">
+        <label for="optionInlineCodeBlock">InlineCodeBlock</label>
+      </div>
+      
+      <div>
+        <input type="radio" id="optionMultilineCodeBlock" name="CodeBlock">
+        <label for="optionMultilineCodeBlock">MultilineCodeBlock</label>
+      </div>
+    
+    <p><button onclick="getOptions()">Copy to clipboard!</button></p>
+    
+    <p>Output<br>
+        <textarea id="output" rows="6" cols="60"></textarea>
+    </p>
+
+    <script type="text/javascript">
+
+    function getOptions() {
+        var italic = document.getElementById("optionItalic").checked;
+        var bold = document.getElementById("optionBold").checked;
+        var StrikeThrough = document.getElementById("optionStrikeThrough").checked;
+        var InlineCodeBlock = document.getElementById("optionInlineCodeBlock").checked;
+        var MultilineCodeBlock = document.getElementById("optionMultilineCodeBlock").checked;
+        var blanktext = document.getElementById("blanktext").value;
+
+        formatText(italic, bold, StrikeThrough, InlineCodeBlock, MultilineCodeBlock, blanktext);
+    }
+
+    function formatText(italic, bold, StrikeThrough, InlineCodeBlock, MultilineCodeBlock, blanktext) {
+        var formattedText = blanktext;
+
+        if (italic) {
+            formattedText = "_" + formattedText + "_";
+        }
+
+        if (bold) {
+            formattedText = "*" + formattedText + "*";
+        }
+
+        if (StrikeThrough) {
+            formattedText = "~" + formattedText + "~";
+        } 
+        
+        if (InlineCodeBlock) {
+            formattedText = "`" + formattedText + "`";
+        } 
+        
+        if (MultilineCodeBlock) {
+            formattedText = "```" + formattedText + "```";
+        } 
+
+        document.getElementById("output").value = formattedText;
+
+        // copy formatted text to clipboard
+        // (tested on Mac OS on Chrome and Firefox and on Windows on Chrome)
+        navigator.clipboard.writeText(formattedText);
+    }
+    </script>
+</body>
+</html>
