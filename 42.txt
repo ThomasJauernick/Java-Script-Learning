@@ -1,4 +1,6 @@
-The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything", calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years. Unfortunately, no one knows what the question is.
+42 is the "Answer to the Ultimate Question of Life, the Universe, and Everything" in The Hitchhiker's Guide to the Galaxy books. It was computed by Deep Thought, the second greatest computer ever. The descendants of Deep Thought's creators are upset by the numeric nature of the answer, not understanding what to do with it or what to tell the people who had commissioned the 7.5-million year project.
+When asked to produce The Ultimate Question to go with the answer "42", Deep Thought admits it is not capable of computing that itself, but that it can help to design an even more powerful computer, which can. This new computer will incorporate living beings into the "computational matrix" and will run for ten million years. It is the planet Earth.
+The number 42, in ASCII, is an asterisk. An asterisk in computer programming is often used as a wildcard character, which means anything can be substituted.
 Divisors: 1, 2, 3, 6, 7, 14, 21, 42
 Ordinal: 42nd; (forty-second)
 Cardinal: forty-two
